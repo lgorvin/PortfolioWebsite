@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&display=swap" rel="stylesheet">
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Luca</label>
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#scrollTo">About Me</a></li>
+      <li><a href="#scrollTo2">Projects</a></li>
+      <li><a href="#scrollTo3">Contact</a></li>
+    </ul>
+  </nav>
+  <div id='home' class="parallax">
+	  <h1>Hey, I'm <br><span class='nameSpan'>Luca</span></h1>
+    
+    <div class="img">
+      <img onclick="smoothScroll(document.getElementById('scrollTo'))" src="https://th.bing.com/th/id/R.4e3d21d9ade9fd939e049d3faf2153e5?rik=rsIpF8LTJs8bjA&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f3%2fDown-Arrow-PNG-Photo.png&ehk=dXfjXdrcbv6HWp7bUFWP%2bhz2HTc%2bc1X2%2fXZ6KRtYVZw%3d&risl=&pid=ImgRaw&r=0"/>
+    </div>
+  </div>
+  <div id='scrollTo' class="content-outer" >
+  	<div class="content-inner">
+      <h1>About Me</h1>
+      <div class='p-container'>
+     	  <p>I am currently completing a Level 3 IT Solutions Technician Apprenticeship at PPM where I am gaining the skills to develop, implement and maintain complete IT solutions within the organisation. Specialising in hardware infrastructure, e.g. servers and networks and software, e.g. operating systems, middleware and applications.<br><br>
+    
+  I am proficient in Python, JavaScript, HTML and CSS. I also have experience with Django and React.js frameworks.<br><br>
+  
+  
+  In college I completed a BTEC Level 3 National Extended Diploma in Computing. Here I gained a wide variety of knowledge including programming, networking, cyber-security and building computer systems.<br><br>
+  
+  In my spare time I enjoy learning to code, helping to further develop my computing knowledge.</p>
+        <img src="https://th.bing.com/th/id/R.582327622cbdc020daf9ba8ebd1a5ca0?rik=lzwDCp9B4Fa66A&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fdownload_252448.png&ehk=W%2bsUO%2bK%2fQtKhpKkRVAF%2bh%2f8lC%2f3GRdfdE6HVKzMhcFk%3d&risl=&pid=ImgRaw&r=0"/>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      </div>
+      <div class='btn-container'>
+        <a href="Capture.PNG" download="LucaGorvinCV">
+        <button id='download' class="button-36" role="button">Download my CV</button>
+        </a>
+      </div>
+  	</div>
+  </div>
+  <div id='scrollTo2' class='content-outer' id='outerBg'>
+    <div class="content-inner" id='outerBg'>
+      <h1 id='innerh1'>Skills and Projects</h1>
+      <div class="wrap-circles">
+        <div class="circle per-25">
+          <div class="inner">JS</div>
+        </div>
+        <div class="circle per-50">
+          <div class="inner">CSS</div>
+        </div>
+        <div class="circle per-75">
+          <div class="inner">HTML</div>
+        </div>
+        <div class="circle per-100">
+          <div class="inner">Python</div>
+        </div>
+      </div>
+      <ul class="gallery">
+      	<li id='slide1'><h1 id='hide'>In this project, I created a color flipper that randomly picks a color, and provides the hash code for you.</h1><button onclick="location.href='https://codepen.io/lgorvin/pen/abYWjra';" class="button-36" id='hideBtn'>Click for Demo</button></li>
+      	<li id='slide2'><h1 id='hide'>In this project I coded a self-driving/learning vehicle. The project also includes a neural network visualiser which shows you the decisions the cars are making.</h1><button onclick="location.href='https://codepen.io/lgorvin/pen/poLPYPb';" class="button-36" id='hideBtn'>Click for Demo</button></li>
+      	<li id='slide3'><h1 id='hide'>This is a website that I created which allows you to encode and decode morse code.</h1><button onclick="location.href='https://selfdrivingcar-nueral-network.lucagorvin.repl.co/';" class="button-36" id='hideBtn'>Click for Demo</button></li>
+      	<li id='slide4'></li>
+      	<li id='slide5'></li>
+      </ul>
+      <div class='p-container'>
+      </div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </div>
+  </div>
+  <div id='scrollTo3' class="content-outer" >
+  	<div class="content-inner">
+      <h1>Contact Me</h1>
+      <div class="wrapper">
+        <form class="form">
+          <div class="pageTitle title">Please fill in the form below.</div>
+          <div class="secondaryTitle title"></div>
+          <input type="text" class="name formEntry" placeholder="Name" />
+          <input type="text" class="email formEntry" placeholder="Email"/>
+          <textarea class="message formEntry" placeholder="Message"></textarea>
+<!--           <input type="checkbox" class="termsConditions" value="Term">
+          <label style="color: grey" for="terms"> I Accept the <span style="color: #0e3721">Terms of Use</span> & <span style="color: #0e3721">Privacy Policy</span>.</label><br> -->
+          <button class="submit formEntry" onclick="thanks()">Submit</button>
+        </form>
+        
+      </div>
+  	</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+

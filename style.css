@@ -1,0 +1,848 @@
+#myBtn {
+  display: block; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 40px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--first-color); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+:root{
+  --first-color: #CF8CBB;
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+  --main-font: 'Dancing Script', cursive;
+  --second-font: 'Quicksand', sans-serif;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}
+
+html, body{
+	padding: 0px;
+	margin: 0px;
+}
+
+html{
+	overflow: hidden;
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective: 1px;
+	-webkit-perspective: 1px;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+}
+
+/* ----------------------------Parallax Scroll Home Page------------------------*/
+
+div.parallax{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+}
+
+div.parallax:after{
+	background-image: url("https://wallpapercave.com/wp/kvZlAgG.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: -1;
+	content: "";
+	transform: translateZ(-1px) scale(2);
+	-webkit-transform: translateZ(-1px) scale(2);
+}
+
+.parallax h1{
+  color: white;
+  font-size: 100px;
+  text-align: center;
+  padding-top: 300px;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 4px 4px black;
+}
+
+/* --------------------------End of Parallax Home Page--------------------------*/
+
+/* -------------------------------Content Containers----------------------------*/
+
+div.content-outer{
+	width: 100%;
+	background-color: white;
+	perspective: 2px;
+	-webkit-perspective: 2px;
+  padding-bottom: 0;
+}
+
+.content-inner{
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+
+.content-inner h1{
+  font-size: 80px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  
+}
+
+#innerh1{
+  padding-bottom: 30px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.p-container{
+  display: flex;
+  padding-bottom: 20px;
+
+}
+
+.p-container img{
+  width: 300px;
+  height: 300px;
+  margin-right: 20%;
+  border: 2px solid black;
+  border-radius: 5%;
+  background-color: var(--first-color);
+  padding: 20px;
+  
+}
+
+.content-inner p{
+  flex: 1;
+  text-align: center;
+  margin-left: 20%;
+  font-size: 18px;
+  padding-right: 150px;
+/*   margin: -150px 0;
+  margin-left: 10%;
+  margin-right: 15%; */
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  padding-bottom: 150px;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* --------------------------------End of Content Containers-------------------*/
+
+/* -------------------------------------Nav Bar---------------------------------*/
+
+nav{
+  background: var(--first-color);
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 1px 1px black;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #fff;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #fff;
+  transition: .5s;
+  color: #022f69;
+}
+.checkbtn{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+/* ---------------------------------End of Nav Bar ----------------------------*/
+
+.nameSpan{
+  color: var(--first-color);
+  text-shadow: 2px 2px black;
+  font-size: 80px;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  animation: bounce 2s infinite;
+  transform: translateY(-90px);
+  height: 10px;
+}
+
+.img img{
+  height: 300px;
+}
+
+.img img:hover{
+  cursor: pointer;
+}
+
+@keyframes bounce{
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(-20);
+  }
+  40% {
+    transform: translateY(-70px);
+  }
+  60% {
+    transform: translateY(-45px);
+  }
+}
+
+#outerBg{
+  background-image: url("https://wallpapercave.com/wp/kvZlAgG.jpg");
+}
+
+#download{
+  height: 100px;
+  margin: -50px auto;
+  display: block;
+  animation: wobble-hor-bottom 3s both;
+  animation-iteration-count: infinite;
+}
+
+#download:hover{
+  animation: blink-1 0.6s both;
+}
+
+.button-36{
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+/*   height: 4rem; */
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+.button-36:hover{
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px){
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+
+/* ---------------------------------Skill Circles------------------------------ */
+
+.wrap-circles{
+  display: flex;
+  min-height: 1vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.circle{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0.5rem;
+  border-radius: 50%;
+  background: #FFCDB2;
+  overflow: hidden;
+}
+.circle.per-25{
+  background-image: conic-gradient(var(--first-color) 88%, white 0);
+  border: 4px solid black;
+}
+
+.circle.per-25:hover{
+  animation: increase 0.6s ease-in-out both;
+  background-image: conic-gradient(var(--first-color) 88%, white 0);
+}
+
+.circle.per-50{
+  background-image: conic-gradient(var(--first-color) 84%, white 0);
+  border: 4px solid black;
+}
+
+.circle.per-50:hover{
+  animation: increase 0.6s ease-in-out both;
+  background-image: conic-gradient(var(--first-color) 84%, white 0);
+}
+
+.circle.per-75{
+  background-image: conic-gradient(var(--first-color) 80%, white 0);
+  border: 4px solid black;
+}
+
+.circle.per-75:hover{
+  animation: increase 0.6s ease-in-out both;
+  background-image: conic-gradient(var(--first-color) 80%, white 0);
+}
+
+.circle.per-100{
+  background-image: conic-gradient(var(--first-color) 80%, white 0);
+  border: 4px solid black;
+}
+
+.circle.per-100:hover{
+  animation: increase 0.6s ease-in-out both;
+  background-image: conic-gradient(var(--first-color) 80%, white 0);
+}
+
+.circle .inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 115px;
+  height: 115px;
+  background: white;
+  border-radius: 50%;
+  font-size: 1.85em;
+  font-weight: 300;
+  color: black;
+  padding-bottom: 0;
+}
+
+@keyframes increase{
+  0% {
+    background-image: conic-gradient(var(--first-color) 0%, white 0);
+  }
+  10% {
+    background-image: conic-gradient(var(--first-color) 10%, white 0);
+  }
+  20% {
+    background-image: conic-gradient(var(--first-color) 20%, white 0);
+  }
+  30% {
+    background-image: conic-gradient(var(--first-color) 30%, white 0);
+  }
+  40% {
+    background-image: conic-gradient(var(--first-color) 40%, white 0);
+  }
+  50% {
+    background-image: conic-gradient(var(--first-color) 50%, white 0);
+  }
+  60% {
+    background-image: conic-gradient(var(--first-color) 60%, white 0);
+  }
+  70% {
+    background-image: conic-gradient(var(--first-color) 70%, white 0);
+  }
+  80% {
+    background-image: conic-gradient(var(--first-color) 80%, white 0);
+  }
+}
+
+/* --------------------------------End of Skill Circles-------------------------*/
+
+/* ----------------------------Project Carousel--------------------------- */
+
+.gallery{
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(5, 40vw);
+	grid-template-rows: 1fr;
+	grid-column-gap: 5rem;
+	grid-row-gap: 1rem;
+	overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+	height: 75vh;
+	scroll-snap-type: both mandatory;
+	scroll-padding: 1rem;
+}
+
+.active{
+	scroll-snap-type: unset;
+}
+
+li{
+	scroll-snap-align: center;
+	display: inline-block;
+	border-radius: 3px;
+	font-size: 0;
+}
+
+#slide1{
+/*   background: var(--first-color); */
+  background-image: url("/colorFlipper.PNG");
+  background-position: center;
+  cursor: pointer;
+}
+
+#slide2{
+  background-image: url("/selfdrivingcar.PNG");
+  background-position: center;
+  cursor: pointer;
+}
+
+#slide3{
+  background-image: url("/morsecode.PNG");
+  background-position: center;
+  cursor: pointer;
+}
+
+#hide{
+  display: none;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: 40px;
+  text-align: center;
+  padding: 0px 20px;
+  margin-top: 30%;
+}
+
+#hideBtn{
+  display: none;
+  margin-left: 35%;
+  text-align: center;
+  margin-top: 10%;
+  line-height: 80px;
+  animation: wobble-hor-bottom 3s both;
+}
+
+#slide1:hover{
+/*   background: var(--first-color); */
+  background: none;
+/*   -webkit-animation: bounce-in-top 1.5s both;
+  animation: bounce-in-top 1.5s both; */
+/*   background-image: url("/colorFlipper.PNG"); */
+}
+
+#slide1:active{
+  animation: none;
+}
+
+#slide1:hover > #hide{
+  display: block;
+}
+
+#slide1:hover > #hideBtn{
+  display: block;
+}
+
+#slide2:hover{
+/*   background: var(--first-color); */
+  background: none;
+/*   -webkit-animation: bounce-in-top 1.5s both;
+  animation: bounce-in-top 1.5s both; */
+/*   background-image: url("/colorFlipper.PNG"); */
+}
+
+#slide2:active{
+  animation: none;
+}
+
+#slide2:hover > #hide{
+  display: block;
+}
+
+#slide2:hover > #hideBtn{
+  display: block;
+}
+
+#slide3:hover{
+  background: none;
+/*   -webkit-animation: bounce-in-top 1.5s both;
+  animation: bounce-in-top 1.5s both; */
+/*   background-image: url("/colorFlipper.PNG"); */
+}
+
+#slide3:active{
+  animation: none;
+}
+
+#slide3:hover > #hide{
+  display: block;
+}
+
+#slide3:hover > #hideBtn{
+  display: block;
+}
+
+#slide4{
+  background-image: url("https://th.bing.com/th/id/R.ad71f62c3ecc20be03592aa469e65e05?rik=rrLDKGRdyMNNew&pid=ImgRaw&r=0");
+}
+
+#slide5{
+  background-image: url("https://th.bing.com/th/id/R.ad71f62c3ecc20be03592aa469e65e05?rik=rrLDKGRdyMNNew&pid=ImgRaw&r=0");
+}
+
+/* ---------------------------End of Project Carousel-------------------------- */
+
+
+/* -----------------------------Contact Form----------------------------------- */
+body{
+  background-color: white;
+}
+
+#title-Tag-Line{
+  font-size: 20px;
+}
+/* .card-item__bg{
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  display: block;
+  position: relative;
+  margin: 30px auto;
+  transform: translate(0px, 50px);
+  z-index: 5;
+} */
+
+/* form animation starts */
+
+.wrapper{
+  margin-bottom: 500px;
+}
+
+.form{
+  background: #fff;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: -50px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-top: 5px solid var(--first-color);
+/*   z-index: 1; */
+  animation: bounce 1.5s infinite;
+}
+::-webkit-input-placeholder{
+  font-size: 1.3em;
+}
+
+.title{
+  display: block;
+  font-family: var(--second-font);
+  margin: 10px auto 5px;
+  width: 300px;
+}
+.termsConditions{
+  margin: 0 auto 5px 80px;
+}
+
+.pageTitle{
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0;
+}
+.secondaryTitle{
+  color: grey;
+  padding: 0;
+}
+
+.name{
+  background-color: #ebebeb;
+  font-family: var(--second-font);
+  color: white;
+}
+.name:hover{
+  border-bottom: 5px solid var(--first-color);
+  transition: ease 0.5s;
+}
+
+.email{
+  background-color: #ebebeb;
+  font-family: var(--second-font);
+  height: 2em;
+}
+
+.email:hover{
+  border-bottom: 5px solid var(--first-color);
+  transition: ease 0.5s;
+}
+
+.message{
+  background-color: #ebebeb;
+  font-family: var(--second-font);
+  overflow: hidden;
+  height: 10rem;
+}
+
+.message:hover{
+  border-bottom: 5px solid var(--first-color);
+  transition: ease 0.5s;
+}
+
+.formEntry{
+  display: block;
+  margin: 30px auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  transition: all 0.5s ease 0s;
+}
+
+.submit{
+  width: 200px;
+  color: white;
+  background-color: var(--first-color);
+  font-size: 20px;
+}
+
+.submit:hover{
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  transform: translateY(-3px);
+  width: 300px;
+  border-top: 5px solid var(--first-color);
+  border-radius: 0%;
+}
+
+/* -------------------------------End of Contact Form---------------------------*/
+
+@keyframes bounce{
+  0% {
+    tranform: translate(0, 4px);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+}
+
+/* --------------------Media Queries for Responsive Design----------------------- */
+
+@media (max-width: 499px){
+  .form{
+    max-width: 280px;
+  }
+  .pageTitle {
+    font-size: 1em;
+  }
+  .formEntry{
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 968px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;    
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 875px){
+  .checkbtn{
+    display: block;
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #27282c;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover, a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  .p-container img {
+    display: none;
+  }
+  .content-inner p {
+    flex: 0;
+    margin-left: 35%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 873px){
+  .content-inner p {
+    margin: 0 auto;
+    padding-right: 0;
+    text-align: center;
+  }
+  .p-container{
+    display: inline;
+  }
+}
+
+@media (max-width: 390px){
+  .content-inner p {
+    margin-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  .p-container {
+    display: inline;
+  }
+  #download {
+    height: 250px;
+  }
+  #slide1:hover > #hide{
+    display: none;
+  }
+  #slide2:hover > #hide{
+    display: none;
+  }
+  #slide3:hover > #hide{
+    display: none;
+  }
+  #slide1:hover > #hideBtn{
+    margin-top: 150%;
+    line-height: 25px;
+  }
+  #slide2:hover > #hideBtn{
+    margin-top: 150%;
+    line-height: 25px;
+  }
+  #slide3:hover > #hideBtn{
+    margin-top: 150%;
+    line-height: 25px;
+  }
+  .button-36 {
+    max-height: 50px;
+    font-size: 14px;
+  }
+}
+
+/* -----------------------------------------------------------------------------*/
+
+@keyframes wobble-hor-bottom{
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+@keyframes text-focus-in{
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
